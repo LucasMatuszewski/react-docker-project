@@ -9,8 +9,42 @@ following:
 - https://github.com/mrcoles/node-react-docker-compose
 - https://github.com/LucasMatuszewski/Docker-Webpack-Course/blob/master/.dockerignore
 
+## COMMANDS FROM DOCKER ONBOARDING:
+> git clone https://github.com/docker/doodle.git
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. make a new build and tag it as cheers2019 in doodle repository (shared tag???).
+    this command use Dockerfile from current folder.
+> cd doodle/cheers2019 && docker build -t predict4u/doodle:cheers2019 .
+
+2. run a code from this docker image:
+> docker run -it --rm predict4u/doodle:cheers2019
+
+3. on MINGW64 (git console on Windows) we have to prefix the command with *winpty*
+> winpty docker run -it --rm predict4u/doodle:cheers2019
+
+4. push image to online repo:
+> docker login && docker push predict4u/doodle:cheers2019
+
+* list all images:
+> docker image ls
+
+* list all containers (without --all shows only running containers):
+> docker container ls --all
+
+* Explore the Docker help pages by running some help commands:
+
+> docker --help
+> docker container --help
+> docker container ls --help
+> docker run --help
+
+### winpty
+is a Windows software package providing an interface similar to a Unix pty-master for communicating with Windows console programs
+https://github.com/rprichard/winpty
+
+
+# CRA
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
