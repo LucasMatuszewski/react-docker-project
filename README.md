@@ -1,7 +1,10 @@
 # React test App with Docker
 following:
+- https://mherman.org/blog/dockerizing-a-react-app/
 - https://medium.com/swlh/dockerizing-a-react-application-with-docker-and-nginx-19e88ef8e99a
+- repo: https://github.com/machariamuguku/Docker-React-Nginx/blob/master/docker-compose-prod.yml
 - https://automationrhapsody.com/dockerize-react-application-with-a-docker-multi-staged-build/
+- repo: https://github.com/llatinov/cypress-testing-framework
 - https://github.com/StephenGrider/docker-react
 - https://github.com/mrcoles/node-react-docker-compose
 - https://github.com/LucasMatuszewski/Docker-Webpack-Course/blob/master/.dockerignore
