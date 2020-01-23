@@ -1,0 +1,42 @@
+#the docker compose file version
+version: "3.7"
+# you can run multiple services inside one docker compose file
+# define them with their dependencies one after the other
+services:
+  # service 1 named react-dev (the name is up to you, could be your app name)
+  react-dev:
+    # service 1 container name (optional, Docker can generate default nam from folder and image names)
+    # Because Docker container names must be unique, you cannot scale a service beyond 1 container if you have specified a custom name.
+    # Option ignored when using Swarm
+    container_name: react-dev
+    # If you specify image as well as build, then Compose names the built image with the name and optional tag specified in image
+    # Option ignored when using Swarm
+    image: predict4u/react:dev
+    # https://docs.docker.com/compose/compose-file/#build
+    build:
+      # the context (working directory) is the current directory
+      # change this to the directory containing the dockerfile if in a different place
+      context: .
+      # the dockerfile to be run to build container
+      dockerfile: Dockerfile
+    # map the exposed port from the underlying service to a port exposed to the outside
+    # in this case  map port 3000 exposed by create react app to also 3000
+    # to be used to access the container from the outside
+    # We use "-" because we can list more ports.
+    ports:
+      - "3000:3000"
+    # the mounted volumes (folders which are outside docker but being used by docker)
+    # Docker watch changes on local folders and maps (:) to Container folder (automatically copy files)
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    # set the environment to development
+    environment:
+      - NODE_ENV=development
+
+# in console type:
+# docker-compose up --build
+
+# stops and removes stopped containers and delete any associated network.
+# The — rmi flag removes the images
+# docker-compose down -v --rmi local

@@ -1,5 +1,11 @@
 # React test App with Docker
-- following: https://medium.com/swlh/dockerizing-a-react-application-with-docker-and-nginx-19e88ef8e99a
+following:
+- https://medium.com/swlh/dockerizing-a-react-application-with-docker-and-nginx-19e88ef8e99a
+- https://automationrhapsody.com/dockerize-react-application-with-a-docker-multi-staged-build/
+- https://github.com/StephenGrider/docker-react
+- https://github.com/mrcoles/node-react-docker-compose
+- https://github.com/LucasMatuszewski/Docker-Webpack-Course/blob/master/.dockerignore
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
